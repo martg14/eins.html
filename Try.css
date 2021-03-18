@@ -1,0 +1,95 @@
+/*Librar las Palabras de Su Formato*/
+* { 
+  all: unset;
+}
+
+.charsheet .sheet-habilidades-proezas input, .sheet-habilidades-proezas button .sheet-habilidades-proezas label {
+  content: '' !important;
+  display: none;
+  border:none;
+  text-shadow:none;
+}
+
+.sheet-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:"name               name                name"
+                      "cuerpo             mente               espiritu"
+                      "proezas            sociales            conocimientos";
+  gap: 3px;
+  padding: 1px;
+}
+
+/*Tamaño de la Grid
+Column= 280p Width
+Row= 140p Height
+*/
+
+/*Nombre, Descripción y Razas*/
+.sheet-name-section {
+  grid-area: name;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content:space-evenly;
+  font-size: 15px;
+  line-height: normal;
+  padding-left: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  flex: auto;
+}
+
+/*Estadisticas*/
+.sheet-estadisticas-general {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.sheet-cuerpo {
+  grid-area: cuerpo;
+  flex-direction: column;
+}
+
+.sheet-mente {
+  grid-area: mente;
+  flex-direction: column;
+}
+
+.sheet-espiritu {
+  grid-area: espiritu;
+  flex-direction: column;
+}
+
+/*Habilidades*/
+.sheet-habilidadestodas {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.sheet-proezas {
+  grid-area: proezas;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  }
+
+.sheet-sociales {
+  grid-area: sociales;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+}
+
+
+.sheet-conocimientos {
+  grid-area: conocimientos;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+}

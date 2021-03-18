@@ -1,0 +1,823 @@
+<!--Hoja de Personaje-->
+<div class="sheet-personajep">
+  <H1>Datos de Personaje</H1>
+  <div class="main">
+
+  <div class="name-section">
+<div class="col">
+  <div class="col"><label>Nombre<input class="name" type="text" name="attr_nombre" older="Nombre Co" /></div>
+  <div class="col"><label>Nivel</label><input class="level" type="number" name="attr_nivel" placeholder="0" /></div>
+  <div class="col"><label>EXP</label><input class="exp" type="number" name="attr_xp" placeholder="0" /></div>
+  <div class="col"><label>PH</label><input class="ph" type="number" name="attr_ph" placeholder="0" /></div>
+</div>
+<div class="col">
+  <div class="col"><label>Altura</label><input class="altura" type="number" name="attr_altura" placeholder="Altura en CM" />Cm.</div>
+  <div class="col"><label>Peso</label><input class="peso" type="number" name="attr_peso" placeholder="Peso en KG" />Kg.</div>
+  <div class="col"><label>Sexo</label><select class="sexo" name="attr_sexoper" placeholder="M/F/O">
+  <option value="F">Hombre</option>
+    <option value="M">Mujer</option>
+      <option value="O">Otro</option>
+</select></div>
+  <div class="col"><label>Ojos</label><input class="ojos" type="text" name="attr_ojoscolor" placeholder="Color" /></div>
+  <div class="col"><label>Cabellos</label><input class="pelo" type="text" name="attr_pelocolor" placeholder="Color/Largo" /></div>
+</div>
+
+<div class="race-section">
+<div class="row"><label>Raza</label><select name="attr_raza1">
+  <option value="-" selected>(Elegir)</option>
+  <option value="Los Alps ganan un nivel adicional en Empatía, Hechicería, y Ocultismo, pero pierden un nivel en Supervivencia. Los Alps tienen la posibilidad de ingresar en los sueños de la gente, mientras se encuentren en estos podrán conocer verdades de las personas sumando +15 a sus tiradas de Empatía, podrán además traer un objeto de los sueños de las personas una vez por semana de un coste de Oro igual a 2d10 x Nivel.">Alp</option>
+  <option value="Los ángeles ganan un nivel adicional en Empatía y Teología, pero pierden un nivel en Subterfugio. A su vez los ángeles al momento de realizar cualquier tirada curativa, sumaran a esta su Nivel del Personaje + 1, empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH) y obtendrán un bonus de daño igual a su estadística más alta.">Angel</option>
+  <option value="Las bestias mágicas ganan un nivel adicional en Atletismo, Alerta y Trato con Animales, pero pierden un nivel en Equitación. A su vez ganan un PE adicional en cualquier estadística de Cuerpo, suman cualquier estadística de Cuerpo a su movimiento una vez adicional y lanzan un dado adicional en la tirada de daño.">Bestia Magica</option>
+  <option value="Los Steam-Punk/Cyborg ganan un nivel adicional en dos de estas habilidades: Mecánica, Herrería, Informática, Investigación y Pericias pero pierden un nivel en Armas. A su vez podrán elegir dos mejoras de equipo y obtenerlas de forma gratuita y permanente (el coste será determinado por el Master), y cada tres niveles podrán agregar una mejora adicional, siempre que puedan costearla claro está (no podrás obtener la mejora de que no se repitan los 0 contra ti, o la de que en tu tirada de daño repites los 9)">Cyborg</option>
+  <option value="Los demonios ganan un nivel adicional en Subterfugio y Ocultismo, pero pierden un nivel en Teología. A su vez los demonios ganan un PE adicional en Entendimiento o Carisma, obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y guardan un dado adicional en las tiradas de daño.">Demonio</option>
+  <option value="Los Genios ganan un nivel adicional en dos de estas habilidades: Hechicería, Ocultismo, Cultura, Subterfugio o Empatía. Además de estos los genios tendrá el poder de conceder hasta 4 deseos (funcionaran como el hechizo Wish pero sin su limitación de tiempo o tirada) pero deberán concederlo a alguien más.">Djin</option>
+  <option value="Los draconicos ganan un nivel adicional en dos habilidades a elección. A su vez guardan un dado adicional en las tiradas de un elemento a elección y poseen un PE adicional en Constitución o Entendimiento.">Draconico</option>
+  <option value="Los dullahan ganan un nivel adicional en Equitación, Ocultismo y Armas, pero pierden un nivel en Medicina y Etiqueta. Estos empiezan con un arma especial, una “Guadaña” (o arma a decisión del GM), esta se considera de calidad excelente y pueden realizar tanto daño físico como mágico a elección del dullahan, esta puede ser invocada desde cualquier sombra (a menos que te desarmen de esta). Puede además convocar a una “Montura Oscura” que posee las estadísticas de un caballo, pero no puede ser destruido y tiene 6 de Destreza en lugar de 4; y más tarde si encontrase un caballo o montura mejor puede establecer a este como su compañero predilecto. Además, lanza un dado adicional en precisión mientras se encuentra montado.">Dullahan</option>
+  <option value="Los elementales ganan un nivel adicional en Hechicería y Ocultismo, pero pierden un nivel en Liderazgo. A su vez guardan un dado adicional de daño en las tiradas del elemento del que provengan, reducirá el coste de comprar y usar estos en 1 o 2 PH y MP (1: 0-6, 2: 9-X) y además reducirá el daño recibo de este en un dado (guardado). Pero reciben un dado adicional (guardado) de un elemento a elección del Master.">Elemental</option>
+  <option value="Los elfos ganan un nivel adicional en Supervivencia y Alerta, pero pierden un nivel en Defensa. A su vez los elfos obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y reciben un bonus adicional si se encontrasen en su ambiente natural (Por Ej: bosques, montaña, mar, etc.) ganando un nivel adicional en Sigilo, Alerta, Trato con Animales, Armas y Supervivencia.">Elfo</option>
+  <option value="Los enanos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería e Investigación, pero pierden un nivel en Atletismo. A su vez ganaran un nivel adicional en una Arma a elección, guardan un dado adicional en sus tiradas de daño con estas y poseen un PE adicional en Fuerza o Constitución.">Enano</option>
+  <option value="Los Ent obtienen un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Medicina, Venenos e Intimidación, pero pierden un nivel en Comercio. Los Ents ganaran la habilidad de recuperar toda su HP, MP y EP una vez por día descansando por 30 minutos en la naturaleza, pueden comunicarse con otras plantas las cuales podrán responder preguntas simples (a menos que sea una planta mágica o muy antigua) estas no están obligadas a responder pero serán tendientes a ayudarte; a su vez obtienen un punto de estadística adicional en Constitución o Entendimiento.">Ent</option>
+  <option value="Las esfinges ganan un nivel en Academicismo y una de estas habilidades: Alquimia, Ocultismo, Cultura, Teología o Medicina, pero pierden un nivel en Subterfugio y Cocina. Empiezan con la ventaja Alas (si no la desean obtendrán 5 PH), y además paras las esfinges los acertijos que acarrean consigo son grandes fuentes de poder, siempre y cuando nadie responda a estos la esfinge ganara un dado en todas las tiradas de la batalla.">Esfinges</option>
+  <option value="Los espíritus ganan un nivel adicional en Ocultismo y Sigilo. A su vez poseen la ventaja Medium (si no la desean obtendrán 1 PH) y el poder de atravesar paredes y objetos gastando 1 de Energía por segundo multiplicado por la cantidad de personas transportadas con él. Además de esto, podrá emplear esta habilidad para esquivar los ataques físicos en combate usando un único Nivel de Energía.">Espíritu</option>
+  <option value="Los fénix ganan un nivel adicional en tres de estas habilidades: Liderazgo, Teología, Ocultismo y Hechicería, pero pierden un nivel en Comercio y Cocina. A su vez cuando un fénix es reducido en 12 Niveles de HP en lugar de hacer una Tirada de Salvación podrá elegir convertirse en un “Huevo de Fénix” tendrá HP como el doble de su máxima vida y tanta Armadura como el doble de la normal (con un mínimo de 10 de Armadura, para esto contara el equipo) y al pasar 1d20+1 horas vuelve a la vida con su HP completamente recuperada, pero mientras se encuentre en forma de huevo resta 3 a sus tiradas de salvación. Además de esto, guardan un dado más en las tiradas de daño de luz y fuego, pero reciben un dado (guardado) de daño adicional de hielo y oscuridad. Durante el día también podrás descansar bajo la luz del sol por 30 minutos una vez por día y recuperar la totalidad de tu HP.">Fenix</option>
+  <option value="Las gárgolas ganan un nivel adicional en Alerta, Defensa y Armas, pero pierden un nivel en Liderazgo y Empatía. Obtén 1 punto adicional de Armadura y Resistencia Mágica por cada nivel en Constitución y Fe respectivamente, empieza con la ventaja “Visión Nocturna” (si no la desean obtendrán 4 PH) y “Alas” (si no la desean obtendrán 5 PH), pero en cambio sí se quedan bajo el sol por una hora se volverán de piedra, en cuyo caso contará como “Edificación” a la hora de calcular resistencia, pero no podrá actuar, aunque será consciente de su entorno. A su vez, estos duermen con los ojos abiertos eliminado penalizadores de Alerta al estar dormidos.">Gargola</option>
+  <option value="Los gigantes ganan un nivel adicional en Intimidación, Defensa y Armas (Armas Pesadas), pero pierden un nivel en Equitación y Trato con Animales. Estos ganaran un PE adicional en Fuerza o Constitución, ganaran un dado en sus tiradas de daño físico, sumaran uno a su movimiento final, y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellos.">Gigante</option>
+  <option value="Los gnomos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería, Investigación y Alquimia, pero pierden un nivel en Defensa. Los gnomos podrán realizar ilusiones del tamaño de su puño que podrán mover objetos que pesen tanto como su Nivel x 10 Kilos y disminuye la dificultad de cualquier cosa que estos construyan en 10 (20 a nivel 5). A su vez reciben un bonus de oro al completar las misiones o al encontrar cofres de tesoro igual a un 50% más que las otras razas (inclusive el oro entregado al principio de la roleada), además ganaran un dado en las tiradas relacionadas en encontrar tesoros u oro.">Gnomo</option>
+  <option value="Las hadas ganan un nivel adicional en Hechicería y Sigilo, pero pierden un nivel en Intimidación. A su vez las hadas ganan 6.5 puntos de Evasión por cada punto en Destreza, obtienen un PE en Entendimiento o Destreza y empezaran con la ventaja Alas (si no la desean obtendrán 5 PH) y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellas.">Hada</option>
+  <option value="Los humanos ganan un nivel en dos de estas habilidades: Comercio, Supervivencia, Teología o Alquimia, pero pierden un nivel en Trato con Animales. A su vez, los humanos reciben 2 Puntos de Habilidad y 1 Punto de Experiencia adicional por sesión">Humano</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Sigilo y Mano a Mano (Asesino), pueden usar sus garras como armas usando Destreza para el daño y guardan un dado extra en la tirada de daño. Puedes aplicar Veneno a tus garras y resta -10 a la tirada del enemigo para resistirla.">Insectoide Asesino</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Defensa y Arma de Asedio (Bombardero), empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH), funcionan como Armas de Asedio, pudiendo usar municiones creadas en su cuerpo, realizan Fuerza k3 (+0k1 cada 2 niveles) en un área de 3x3, pero restan -10 a su Precisión con estas.">Insectoide Bombardero</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Pericias y Alerta (Obrero), empezaran con las ventajas “Infatigable” (si no la desean obtendrán 1 PH), e “Instintos” (si no la desean obtendrán 3 PH), sus creaciones se consideran de un nivel superior y sus trampas cuentan como si tuviera su puntuación en Supervivencia 2 niveles más alto. Otorga 6 de Armadura.">Insectoide Obrero</option>
+  <option value="Los kitsunes ganan un nivel adicional en tres de estas habilidades: Academicismo, Ocultismo, Subterfugio, Hechicería, Medicina, Veneno y Trato con Animales pero pierden un nivel en Equitación. Y al crear el personaje podrán elegir si sumar a todas sus tiradas de Sociales o Conocimientos su Nivel de Personaje + 3.">Kitsune</option>
+  <option value="Los licántropos ganan un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Intimidación, Atletismo y Comercio, pero pierden un nivel en Etiqueta y Pericias. Los licántropos pueden o “Convertirse” o permanecer constantemente en su forma de lobo, mientras están en esta, ganan un dado adicional en las tiradas de daño físico, suman cualquiera de sus Estadísticas de Cuerpo a su movimiento una vez adicional y si solo poseen un Nivel de HP tendrán dos turnos en combate en lugar de uno. Sin embargo, en las noches de luna llena obtendrán de manera pasivo esto último, pero deben hacer una tirada de Fe (Dificultad= 25 –puede subir-) para evitar perder el control.">Licantropo</option>
+  <option value="Las medusas ganan un nivel adicional en Hechicería, Intimidación y Trato con Animales. Las medusas empiezan con la ventaja Visión 360° (si no la desean obtendrán 5 PH), ganan un nivel de Entendimiento o Carisma, y además las medusas llevan consigo el poder de petrificar a su víctima cuando estas sean miradas directamente a los ojos. Para esto la medusa debe primero realizar una tirada de Precisión usando su Carisma o Entendimiento únicamente para la tirada (guarda tantos dados como tira) y si lo supera su oponente debe lanzar 1d10 y en esa cantidad de turnos, si no logra derrotar a la medusa, este se petrificará. Esta habilidad solo puede ser usada tantas veces como el nivel del personaje más uno (no contando fallo para usos), pero si esta habilidad es reflejada por cualquier medio la medusa se petrificará en 1d10 rondas.">Medusa</option>
+  <option value="Los mimic ganan un nivel adicional en Sigilo y Subterfugio, pero pierden un nivel en Trato con Animales y Etiqueta. A su vez los mimic son capaces de transformarse en objetos de tamaño mediano o pequeño debiendo tomarse un minuto para concluir la transformación, en esta forma repite los 9 como 0 en tiradas de Sigilo y si alguien los toca pueden realizar un ataque y un agarre, repitiendo los 9 como 0 en ambas tiradas (no de daño). Además del daño realizado deberá lanzar 2d4 para determinar el daño a la armadura equipada o al arma si no posee armadura; y aumenta en +10 la dificultad de soltarse de sus agarres.">Mimic</option>
+  <option value="Los orcos ganan un nivel adicional en Intimidación y Armas (a elección) o Hechicería, pero pierden un dado en Etiqueta. A su vez, guardan un dado adicional en las tiradas de daño, si pierden dos Niveles de HP guardaran otro dado adicional y uno más si solo les queda un Nivel de HP. Y la primera vez que fueran a caer inconscientes en combate en lugar de eso se mantienen en 1 de HP y tendrán éxito en su primera Tirada de Salvación">Orco</option>
+  <option value="Los Slimes ganan un nivel adicional en dos de estas habilidades: Alquimia, Venenos, Empatía y Medicina, pero pierden un nivel en Cultura. A diferencia del resto de las razas estos no tendrán Energía, solo Vida y Mana, la mitad de su puntuación en Espíritu se suma a cada nivel de HP de estos. Además podrán pagar los skills con MP, pagando la mitad de EP que tendrían que pagar normalmente.">Slime</option>
+  <option value="Los stella ganan un nivel adicional en dos de estas habilidades: Teología, Ocultismo y Hechicería, pero pierden un nivel en Supervivencia. Lanza un dado adicional en las tiradas de daño de Oscuridad o Luz, guardando un dado adicional si es día para los de luz, o para oscuridad si es de noche, además de esto recuperan 5 (10 a nivel 5) de HP por el daño producido con estos durante el momento correcto del día.">Stella</option>
+  <option value="Los tritones ganan un nivel adicional en dos de estas habilidades: Academicismo, Alquimia o Investigación, pero pierden un nivel en Atletismo (pero pierden esta desventaja y ganan un dado cuando se encuentran en el agua). A su vez los tritones tienen una piel escamosa muy resistente que otorga a estos 8 Armadura y podrán respirar bajo además de duplicar su movimiento en esta, pero en tierra pierden uno de movimiento. Además de esto podrás usar un hermoso canto para distraer a tus enemigos, lanza 1d10+ Interpretación o Carisma contra su Espíritu, si los superas perderán 10 de Evasión.">Triton</option>
+  <option value="Los trolls ganan un nivel adicional en Supervivencia, Armas (Arcos o Ballestas) y Medicina. A su vez estos poseen una regeneración sobrenatural teniendo la posibilidad de en combate gastar de 5 EP para recuperar un Nivel de HP, y obtienen la ventaja Curación Rápida (si no la desean obtendrán 1 PH).">Trol</option>
+  <option value="Los unicornios ganan un nivel adicional Hechicería, Empatía y Atletismo, pero pierden un nivel en Subterfugio. Siempre que estos realicen una buena acción, traigan risas o felicidad, o por otras acciones en las que el Master así lo ameritase, ganaran “Contadores de Alegría”. Estos contadores pueden gastarse para ganar dados en cualquier tirada de personaje, el jugador podrá utilizar tantos dados como desee (1 Contador= 1 Dado Ganado). Además de esto, suman su Destreza a su movimiento y puede también, gastar 2 de MP, derramar lágrimas sobre un aliado o tocarlo con su cuerno para recuperar 10 (15 a nivel 5) de HP a este.">Unicornio</option>
+  <option value="Las valkyrias ganan un nivel adicional en dos de estas habilidades: Armas (a elección), Defensa, Teología o Batalla. A su vez podrán gastar una Acción Menor luego de atacar o curar para recuperar HP de todos sus aliados igual a su puntuación en Arma, Defensa o Batalla.">Valkiria</option>
+  <option value="Los vampiros ganan un nivel adicional en tres de estas habilidades: Cultura, Etiqueta, Ocultismo, Cocina, Empatía o Subterfugio, pero pierden un nivel en Teología. A su vez los vampiros empiezan con un PE adicional en Carisma y recuperan 5 (10 a nivel 5) de HP por el daño producido. A su vez tendrán la posibilidad de recuperar 3 Niveles de HP tomando la sangre del cuello de un personaje, pero son extremadamente débiles a la luz solar, solo pueden permanecer bajo esta por cortos periodos (veinte minutos por nivel de personaje + 20), no poseen reflejo.">Vampiro</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades y Lingüística y Subterfugio (Hielo), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), estas además tienen el poder de caminar sobre el agua convirtiendo el suelo por donde caminan en hielo, y gana un dado adicional en las tiradas de daño que realiza daño de hielo.">Yuki-Onna Hielo</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Comercio y Etiqueta (Luna), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), cuando sea de noche estas ganan Nivel de Personaje Nivel de Personaje + 3 en todas sus tiradas de Conocimiento, Sociales o Proezas (elegir en la creación).">Yuki-Onna Luna</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Atletismo y Mano a Mano (Vampiro), lanzan un dado adicional en las tiradas de daño y recuperan 5 (10 a nivel 5) de HP por el daño producido, además sumara su Nivel de Personaje + 5 a las tiradas para seguir/cazar a alguien.">Yuki-Onna Vampiro</option>
+  <option value="Los zombies ganan un nivel adicional en Intimidación y Supervivencia, pero pierden un dado en Pericias. A su vez estos poseen 11 Niveles de HP Totales, pero solo 3 Niveles Negativos, además restaran -3 a sus Tiradas de Salvación y reciben un dado (guardado) de daño adicional de fuego y sacro. Los zombies no necesitaran comer ni dormir, pero deben comer un poco de carne al menos una vez por día y descansar al menos una vez por semana.">Zombie</option></select>
+</select>
+</div>
+
+<div class="row"><label>Raza Agregada</label><select name="attr_raza2">
+  <option value="-" selected>(Elegir)</option>
+  <option value="Los Alps ganan un nivel adicional en Empatía, Hechicería, y Ocultismo, pero pierden un nivel en Supervivencia. Los Alps tienen la posibilidad de ingresar en los sueños de la gente, mientras se encuentren en estos podrán conocer verdades de las personas sumando +15 a sus tiradas de Empatía, podrán además traer un objeto de los sueños de las personas una vez por semana de un coste de Oro igual a 2d10 x Nivel.">Alp</option>
+  <option value="Los ángeles ganan un nivel adicional en Empatía y Teología, pero pierden un nivel en Subterfugio. A su vez los ángeles al momento de realizar cualquier tirada curativa, sumaran a esta su Nivel del Personaje + 1, empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH) y obtendrán un bonus de daño igual a su estadística más alta.">Angel</option>
+  <option value="Las bestias mágicas ganan un nivel adicional en Atletismo, Alerta y Trato con Animales, pero pierden un nivel en Equitación. A su vez ganan un PE adicional en cualquier estadística de Cuerpo, suman cualquier estadística de Cuerpo a su movimiento una vez adicional y lanzan un dado adicional en la tirada de daño.">Bestia Magica</option>
+  <option value="Los Steam-Punk/Cyborg ganan un nivel adicional en dos de estas habilidades: Mecánica, Herrería, Informática, Investigación y Pericias pero pierden un nivel en Armas. A su vez podrán elegir dos mejoras de equipo y obtenerlas de forma gratuita y permanente (el coste será determinado por el Master), y cada tres niveles podrán agregar una mejora adicional, siempre que puedan costearla claro está (no podrás obtener la mejora de que no se repitan los 0 contra ti, o la de que en tu tirada de daño repites los 9)">Cyborg</option>
+  <option value="Los demonios ganan un nivel adicional en Subterfugio y Ocultismo, pero pierden un nivel en Teología. A su vez los demonios ganan un PE adicional en Entendimiento o Carisma, obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y guardan un dado adicional en las tiradas de daño.">Demonio</option>
+  <option value="Los Genios ganan un nivel adicional en dos de estas habilidades: Hechicería, Ocultismo, Cultura, Subterfugio o Empatía. Además de estos los genios tendrá el poder de conceder hasta 4 deseos (funcionaran como el hechizo Wish pero sin su limitación de tiempo o tirada) pero deberán concederlo a alguien más.">Djin</option>
+  <option value="Los draconicos ganan un nivel adicional en dos habilidades a elección. A su vez guardan un dado adicional en las tiradas de un elemento a elección y poseen un PE adicional en Constitución o Entendimiento.">Draconico</option>
+  <option value="Los dullahan ganan un nivel adicional en Equitación, Ocultismo y Armas, pero pierden un nivel en Medicina y Etiqueta. Estos empiezan con un arma especial, una “Guadaña” (o arma a decisión del GM), esta se considera de calidad excelente y pueden realizar tanto daño físico como mágico a elección del dullahan, esta puede ser invocada desde cualquier sombra (a menos que te desarmen de esta). Puede además convocar a una “Montura Oscura” que posee las estadísticas de un caballo, pero no puede ser destruido y tiene 6 de Destreza en lugar de 4; y más tarde si encontrase un caballo o montura mejor puede establecer a este como su compañero predilecto. Además, lanza un dado adicional en precisión mientras se encuentra montado.">Dullahan</option>
+  <option value="Los elementales ganan un nivel adicional en Hechicería y Ocultismo, pero pierden un nivel en Liderazgo. A su vez guardan un dado adicional de daño en las tiradas del elemento del que provengan, reducirá el coste de comprar y usar estos en 1 o 2 PH y MP (1: 0-6, 2: 9-X) y además reducirá el daño recibo de este en un dado (guardado). Pero reciben un dado adicional (guardado) de un elemento a elección del Master.">Elemental</option>
+  <option value="Los elfos ganan un nivel adicional en Supervivencia y Alerta, pero pierden un nivel en Defensa. A su vez los elfos obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y reciben un bonus adicional si se encontrasen en su ambiente natural (Por Ej: bosques, montaña, mar, etc.) ganando un nivel adicional en Sigilo, Alerta, Trato con Animales, Armas y Supervivencia.">Elfo</option>
+  <option value="Los enanos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería e Investigación, pero pierden un nivel en Atletismo. A su vez ganaran un nivel adicional en una Arma a elección, guardan un dado adicional en sus tiradas de daño con estas y poseen un PE adicional en Fuerza o Constitución.">Enano</option>
+  <option value="Los Ent obtienen un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Medicina, Venenos e Intimidación, pero pierden un nivel en Comercio. Los Ents ganaran la habilidad de recuperar toda su HP, MP y EP una vez por día descansando por 30 minutos en la naturaleza, pueden comunicarse con otras plantas las cuales podrán responder preguntas simples (a menos que sea una planta mágica o muy antigua) estas no están obligadas a responder pero serán tendientes a ayudarte; a su vez obtienen un punto de estadística adicional en Constitución o Entendimiento.">Ent</option>
+  <option value="Las esfinges ganan un nivel en Academicismo y una de estas habilidades: Alquimia, Ocultismo, Cultura, Teología o Medicina, pero pierden un nivel en Subterfugio y Cocina. Empiezan con la ventaja Alas (si no la desean obtendrán 5 PH), y además paras las esfinges los acertijos que acarrean consigo son grandes fuentes de poder, siempre y cuando nadie responda a estos la esfinge ganara un dado en todas las tiradas de la batalla.">Esfinges</option>
+  <option value="Los espíritus ganan un nivel adicional en Ocultismo y Sigilo. A su vez poseen la ventaja Medium (si no la desean obtendrán 1 PH) y el poder de atravesar paredes y objetos gastando 1 de Energía por segundo multiplicado por la cantidad de personas transportadas con él. Además de esto, podrá emplear esta habilidad para esquivar los ataques físicos en combate usando un único Nivel de Energía.">Espíritu</option>
+  <option value="Los fénix ganan un nivel adicional en tres de estas habilidades: Liderazgo, Teología, Ocultismo y Hechicería, pero pierden un nivel en Comercio y Cocina. A su vez cuando un fénix es reducido en 12 Niveles de HP en lugar de hacer una Tirada de Salvación podrá elegir convertirse en un “Huevo de Fénix” tendrá HP como el doble de su máxima vida y tanta Armadura como el doble de la normal (con un mínimo de 10 de Armadura, para esto contara el equipo) y al pasar 1d20+1 horas vuelve a la vida con su HP completamente recuperada, pero mientras se encuentre en forma de huevo resta 3 a sus tiradas de salvación. Además de esto, guardan un dado más en las tiradas de daño de luz y fuego, pero reciben un dado (guardado) de daño adicional de hielo y oscuridad. Durante el día también podrás descansar bajo la luz del sol por 30 minutos una vez por día y recuperar la totalidad de tu HP.">Fenix</option>
+  <option value="Las gárgolas ganan un nivel adicional en Alerta, Defensa y Armas, pero pierden un nivel en Liderazgo y Empatía. Obtén 1 punto adicional de Armadura y Resistencia Mágica por cada nivel en Constitución y Fe respectivamente, empieza con la ventaja “Visión Nocturna” (si no la desean obtendrán 4 PH) y “Alas” (si no la desean obtendrán 5 PH), pero en cambio sí se quedan bajo el sol por una hora se volverán de piedra, en cuyo caso contará como “Edificación” a la hora de calcular resistencia, pero no podrá actuar, aunque será consciente de su entorno. A su vez, estos duermen con los ojos abiertos eliminado penalizadores de Alerta al estar dormidos.">Gargola</option>
+  <option value="Los gigantes ganan un nivel adicional en Intimidación, Defensa y Armas (Armas Pesadas), pero pierden un nivel en Equitación y Trato con Animales. Estos ganaran un PE adicional en Fuerza o Constitución, ganaran un dado en sus tiradas de daño físico, sumaran uno a su movimiento final, y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellos.">Gigante</option>
+  <option value="Los gnomos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería, Investigación y Alquimia, pero pierden un nivel en Defensa. Los gnomos podrán realizar ilusiones del tamaño de su puño que podrán mover objetos que pesen tanto como su Nivel x 10 Kilos y disminuye la dificultad de cualquier cosa que estos construyan en 10 (20 a nivel 5). A su vez reciben un bonus de oro al completar las misiones o al encontrar cofres de tesoro igual a un 50% más que las otras razas (inclusive el oro entregado al principio de la roleada), además ganaran un dado en las tiradas relacionadas en encontrar tesoros u oro.">Gnomo</option>
+  <option value="Las hadas ganan un nivel adicional en Hechicería y Sigilo, pero pierden un nivel en Intimidación. A su vez las hadas ganan 6.5 puntos de Evasión por cada punto en Destreza, obtienen un PE en Entendimiento o Destreza y empezaran con la ventaja Alas (si no la desean obtendrán 5 PH) y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellas.">Hada</option>
+  <option value="Los humanos ganan un nivel en dos de estas habilidades: Comercio, Supervivencia, Teología o Alquimia, pero pierden un nivel en Trato con Animales. A su vez, los humanos reciben 2 Puntos de Habilidad y 1 Punto de Experiencia adicional por sesión">Humano</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Sigilo y Mano a Mano (Asesino), pueden usar sus garras como armas usando Destreza para el daño y guardan un dado extra en la tirada de daño. Puedes aplicar Veneno a tus garras y resta -10 a la tirada del enemigo para resistirla.">Insectoide Asesino</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Defensa y Arma de Asedio (Bombardero), empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH), funcionan como Armas de Asedio, pudiendo usar municiones creadas en su cuerpo, realizan Fuerza k3 (+0k1 cada 2 niveles) en un área de 3x3, pero restan -10 a su Precisión con estas.">Insectoide Bombardero</option>
+  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Pericias y Alerta (Obrero), empezaran con las ventajas “Infatigable” (si no la desean obtendrán 1 PH), e “Instintos” (si no la desean obtendrán 3 PH), sus creaciones se consideran de un nivel superior y sus trampas cuentan como si tuviera su puntuación en Supervivencia 2 niveles más alto. Otorga 6 de Armadura.">Insectoide Obrero</option>
+  <option value="Los kitsunes ganan un nivel adicional en tres de estas habilidades: Academicismo, Ocultismo, Subterfugio, Hechicería, Medicina, Veneno y Trato con Animales pero pierden un nivel en Equitación. Y al crear el personaje podrán elegir si sumar a todas sus tiradas de Sociales o Conocimientos su Nivel de Personaje + 3.">Kitsune</option>
+  <option value="Los licántropos ganan un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Intimidación, Atletismo y Comercio, pero pierden un nivel en Etiqueta y Pericias. Los licántropos pueden o “Convertirse” o permanecer constantemente en su forma de lobo, mientras están en esta, ganan un dado adicional en las tiradas de daño físico, suman cualquiera de sus Estadísticas de Cuerpo a su movimiento una vez adicional y si solo poseen un Nivel de HP tendrán dos turnos en combate en lugar de uno. Sin embargo, en las noches de luna llena obtendrán de manera pasivo esto último, pero deben hacer una tirada de Fe (Dificultad= 25 –puede subir-) para evitar perder el control.">Licantropo</option>
+  <option value="Las medusas ganan un nivel adicional en Hechicería, Intimidación y Trato con Animales. Las medusas empiezan con la ventaja Visión 360° (si no la desean obtendrán 5 PH), ganan un nivel de Entendimiento o Carisma, y además las medusas llevan consigo el poder de petrificar a su víctima cuando estas sean miradas directamente a los ojos. Para esto la medusa debe primero realizar una tirada de Precisión usando su Carisma o Entendimiento únicamente para la tirada (guarda tantos dados como tira) y si lo supera su oponente debe lanzar 1d10 y en esa cantidad de turnos, si no logra derrotar a la medusa, este se petrificará. Esta habilidad solo puede ser usada tantas veces como el nivel del personaje más uno (no contando fallo para usos), pero si esta habilidad es reflejada por cualquier medio la medusa se petrificará en 1d10 rondas.">Medusa</option>
+  <option value="Los mimic ganan un nivel adicional en Sigilo y Subterfugio, pero pierden un nivel en Trato con Animales y Etiqueta. A su vez los mimic son capaces de transformarse en objetos de tamaño mediano o pequeño debiendo tomarse un minuto para concluir la transformación, en esta forma repite los 9 como 0 en tiradas de Sigilo y si alguien los toca pueden realizar un ataque y un agarre, repitiendo los 9 como 0 en ambas tiradas (no de daño). Además del daño realizado deberá lanzar 2d4 para determinar el daño a la armadura equipada o al arma si no posee armadura; y aumenta en +10 la dificultad de soltarse de sus agarres.">Mimic</option>
+  <option value="Los orcos ganan un nivel adicional en Intimidación y Armas (a elección) o Hechicería, pero pierden un dado en Etiqueta. A su vez, guardan un dado adicional en las tiradas de daño, si pierden dos Niveles de HP guardaran otro dado adicional y uno más si solo les queda un Nivel de HP. Y la primera vez que fueran a caer inconscientes en combate en lugar de eso se mantienen en 1 de HP y tendrán éxito en su primera Tirada de Salvación">Orco</option>
+  <option value="Los Slimes ganan un nivel adicional en dos de estas habilidades: Alquimia, Venenos, Empatía y Medicina, pero pierden un nivel en Cultura. A diferencia del resto de las razas estos no tendrán Energía, solo Vida y Mana, la mitad de su puntuación en Espíritu se suma a cada nivel de HP de estos. Además podrán pagar los skills con MP, pagando la mitad de EP que tendrían que pagar normalmente.">Slime</option>
+  <option value="Los stella ganan un nivel adicional en dos de estas habilidades: Teología, Ocultismo y Hechicería, pero pierden un nivel en Supervivencia. Lanza un dado adicional en las tiradas de daño de Oscuridad o Luz, guardando un dado adicional si es día para los de luz, o para oscuridad si es de noche, además de esto recuperan 5 (10 a nivel 5) de HP por el daño producido con estos durante el momento correcto del día.">Stella</option>
+  <option value="Los tritones ganan un nivel adicional en dos de estas habilidades: Academicismo, Alquimia o Investigación, pero pierden un nivel en Atletismo (pero pierden esta desventaja y ganan un dado cuando se encuentran en el agua). A su vez los tritones tienen una piel escamosa muy resistente que otorga a estos 8 Armadura y podrán respirar bajo además de duplicar su movimiento en esta, pero en tierra pierden uno de movimiento. Además de esto podrás usar un hermoso canto para distraer a tus enemigos, lanza 1d10+ Interpretación o Carisma contra su Espíritu, si los superas perderán 10 de Evasión.">Triton</option>
+  <option value="Los trolls ganan un nivel adicional en Supervivencia, Armas (Arcos o Ballestas) y Medicina. A su vez estos poseen una regeneración sobrenatural teniendo la posibilidad de en combate gastar de 5 EP para recuperar un Nivel de HP, y obtienen la ventaja Curación Rápida (si no la desean obtendrán 1 PH).">Trol</option>
+  <option value="Los unicornios ganan un nivel adicional Hechicería, Empatía y Atletismo, pero pierden un nivel en Subterfugio. Siempre que estos realicen una buena acción, traigan risas o felicidad, o por otras acciones en las que el Master así lo ameritase, ganaran “Contadores de Alegría”. Estos contadores pueden gastarse para ganar dados en cualquier tirada de personaje, el jugador podrá utilizar tantos dados como desee (1 Contador= 1 Dado Ganado). Además de esto, suman su Destreza a su movimiento y puede también, gastar 2 de MP, derramar lágrimas sobre un aliado o tocarlo con su cuerno para recuperar 10 (15 a nivel 5) de HP a este.">Unicornio</option>
+  <option value="Las valkyrias ganan un nivel adicional en dos de estas habilidades: Armas (a elección), Defensa, Teología o Batalla. A su vez podrán gastar una Acción Menor luego de atacar o curar para recuperar HP de todos sus aliados igual a su puntuación en Arma, Defensa o Batalla.">Valkiria</option>
+  <option value="Los vampiros ganan un nivel adicional en tres de estas habilidades: Cultura, Etiqueta, Ocultismo, Cocina, Empatía o Subterfugio, pero pierden un nivel en Teología. A su vez los vampiros empiezan con un PE adicional en Carisma y recuperan 5 (10 a nivel 5) de HP por el daño producido. A su vez tendrán la posibilidad de recuperar 3 Niveles de HP tomando la sangre del cuello de un personaje, pero son extremadamente débiles a la luz solar, solo pueden permanecer bajo esta por cortos periodos (veinte minutos por nivel de personaje + 20), no poseen reflejo.">Vampiro</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades y Lingüística y Subterfugio (Hielo), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), estas además tienen el poder de caminar sobre el agua convirtiendo el suelo por donde caminan en hielo, y gana un dado adicional en las tiradas de daño que realiza daño de hielo.">Yuki-Onna Hielo</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Comercio y Etiqueta (Luna), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), cuando sea de noche estas ganan Nivel de Personaje Nivel de Personaje + 3 en todas sus tiradas de Conocimiento, Sociales o Proezas (elegir en la creación).">Yuki-Onna Luna</option>
+  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Atletismo y Mano a Mano (Vampiro), lanzan un dado adicional en las tiradas de daño y recuperan 5 (10 a nivel 5) de HP por el daño producido, además sumara su Nivel de Personaje + 5 a las tiradas para seguir/cazar a alguien.">Yuki-Onna Vampiro</option>
+  <option value="Los zombies ganan un nivel adicional en Intimidación y Supervivencia, pero pierden un dado en Pericias. A su vez estos poseen 11 Niveles de HP Totales, pero solo 3 Niveles Negativos, además restaran -3 a sus Tiradas de Salvación y reciben un dado (guardado) de daño adicional de fuego y sacro. Los zombies no necesitaran comer ni dormir, pero deben comer un poco de carne al menos una vez por día y descansar al menos una vez por semana.">Zombie</option></select>
+</select>
+  </div></div>  
+  
+  <div class="descrpgen"><label>Descripcion:</label><textarea class="desgeneral" type="text" name="attr_desgeneral" placeholder="Descripción General del Personaje"></textarea></div>
+  
+</div>
+
+  <div class="estadisticas-general">
+    <H1>Estadisticas</H1>
+    <div class="cuerpo">
+    <div class="estadisticas-cuerpo">
+      <button name="roll_fuerza" type="roll" value="&{template:default} {{name=Fuerza}} {{Resultado=[[(@{fuerza}d10!!+@{fuerza_flat})]]}}">Fuerza</button>
+      <input type="number" name="attr_fuerza_base" value="1" >
+      <input type="hidden" name="attr_fuerza_talent" value="0" readonly>
+      <input type="hidden" name="attr_fuerza_item" value="0" readonly>
+      <input type="hidden" name="attr_fuerza_buff" value="0" readonly>
+      <input type="hidden" name="attr_fuerza_fijo" value="0" readonly>
+    <input type="number" name="attr_fuerza" value="0" title="@{fuerza}" readonly>
+    </div>
+
+      <div class="estadisticas-cuerpo">
+        <button name="roll_destreza" type="roll" value="&{template:default} {{name=Destreza}} {{Resultado=[[(@{destreza}d10!!+@{destreza_flat})]]}}">Destreza</button>
+        <input type="number" name="attr_destreza_base" value="1" >
+        <input type="hidden" name="attr_destreza_talent" value="0" readonly>
+        <input type="hidden" name="attr_destreza_item" value="0" readonly>
+        <input type="hidden" name="attr_destreza_buff" value="0" readonly>
+        <input type="hidden" name="attr_destreza_fijo" value="0" readonly>
+      <input type="number" name="attr_destreza" value="0" title="@{destreza}" readonly>
+      </div>
+
+        <div class="estadisticas-cuerpo">
+          <button name="roll_constitucion" type="roll" value="&{template:default} {{name=Constitución}} {{Resultado=[[(@{constitucion}d10!!+@{constitucion_flat})]]}}">Constitución</button>
+          <input type="number" name="attr_constitucion_base" value="1" >
+          <input type="hidden" name="attr_constitucion_talent" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_item" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_buff" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_fijo" value="0" readonly>
+        <input type="number" name="attr_constitucion" value="0" title="@{constitucion}" readonly>
+        </div>
+
+        <label name="hptot" class="hpprincipal" value="@{hptot}"></label>
+      </div>
+
+      <div class="mente">
+        <div class="estadisticas-mente">
+          <button name="roll_entendimiento" type="roll" value="&{template:default} {{name=Entendimiento}} {{Resultado=[[(@{entendimiento}d10!!+@{entendimiento_flat})]]}}">Entendimiento</button>
+          <input type="number" name="attr_entendimiento_base" value="1" >
+          <input type="hidden" name="attr_entendimiento_talent" value="0" readonly>
+          <input type="hidden" name="attrentendimiento_item" value="0" readonly>
+          <input type="hidden" name="attr_entendimiento_buff" value="0" readonly>
+          <input type="hidden" name="attr_entendimiento_fijo" value="0" readonly>
+        <input type="number" name="attr_entendimiento" value="0" title="@{entendimiento}" readonly>
+        </div>
+
+        <div class="estadisticas-mente">
+          <button name="roll_fe" type="roll" value="&{template:default} {{name=Fe}} {{Resultado=[[(@{fe}d10!!+@{fe_flat})]]}}">Fe</button>
+          <input type="number" name="attr_fe_base" value="1" >
+          <input type="hidden" name="attr_fe_talent" value="0" readonly>
+          <input type="hidden" name="attr_fe_item" value="0" readonly>
+          <input type="hidden" name="attr_fe_buff" value="0" readonly>
+          <input type="hidden" name="attr_fe_fijo" value="0" readonly>
+        <input type="number" name="attr_fe" value="0" title="@{fe}" readonly>
+        </div>
+
+        <label name="hptot" class="hpprincipal" value="@{mptot}"></label>
+
+      </div>
+
+      <div class="espiritu">
+        <div class="estadisticas-espiritu">
+          <button name="roll_bravura" type="roll" value="&{template:default} {{name=Bravura}} {{Resultado=[[(@{bravura}d10!!+@{bravura_flat})]]}}">Bravura</button>
+          <input type="number" name="attr_bravura_base" value="1" >
+          <input type="hidden" name="attr_bravura_talent" value="0" readonly>
+          <input type="hidden" name="attr_bravura_item" value="0" readonly>
+          <input type="hidden" name="attr_bravura_buff" value="0" readonly>
+          <input type="hidden" name="attr_bravura_fijo" value="0" readonly>
+         <input type="number" name="attr_bravura" value="0" title="@{bravura}" readonly>
+        </div>
+
+        <div class="estadisticas-espiritu">
+          <button name="roll_carisma" type="roll" value="&{template:default} {{name=Carisma}} {{Resultado=[[(@{carisma}d10!!+@{carisma_flat})]]}}">Carisma</button>
+          <input type="number" name="attr_carisma_base" value="1" >
+          <input type="hidden" name="attr_carisma_talent" value="0" readonly>
+          <input type="hidden" name="attr_carisma_item" value="0" readonly>
+          <input type="hidden" name="attr_carisma_buff" value="0" readonly>
+          <input type="hidden" name="attr_carisma_fijo" value="0" readonly>
+        <input type="number" name="attr_carisma" value="0" title="@{carisma}" readonly>
+        </div>
+      
+        <label name="hptot" class="hpprincipal" value="@{eptot}"></label>
+      </div>
+
+</div>
+
+
+<div class="habilidadestodas">
+  <div class="proezas">
+    <div class="habilidades-proezas">
+      <div class="proezas-total">
+      <input type="number" name="attr_alerta" value="0" title="@{alerta}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_alerta" type="roll" value="&{template:default} {{name=Alerta}} {{Resultado=[[(@{alerta}+?{Name of Query|Entendimiento, @{entendimiento}|Destreza, @{destreza}})d10k@{alerta}!!+@{alerta_flat}]]}}">Alerta</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_alerta_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_alerta_talent" value="0" readonly>
+        <input type="hidden" name="attr_alerta_item" value="0" readonly>
+        <input type="hidden" name="attr_alerta_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_alerta_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+        <input type="number" name="attr_armas" value="0" title="@{armas}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_armas" type="roll" value="&{template:default} {{name=Armas}} {{Resultado=[[(@{armas}+?{Name of Query|Fuerza, @{fuerza}|Destreza, @{destreza}|Constitución, @{constitucion}})d10k@{armas}!!+@{armas_flat}]]}}">Armas</button>
+      </div>
+        <select id="armas" onchange="armase(this);">
+            <option value="arcos">Arcos y Ballestas</option>
+            <option value="arm_pes">Armas Pesadas</option>
+            <option value="bas_por">Bastones y Porras</option>
+            <option value="cad_lat">Cademas y Latigos</option>
+            <option value="dagas">Dagas</option>
+            <option value="espadas">Espadas</option>
+            <option value="katar">Katar</option>
+            <option value="lan_ast">Lanzas y Astas</option>
+            <option value="man_man">Mano a Mano</option>
+            <option value="arm_ase">Armas de Asedio</option>
+          </select>
+      <div class="proezas-base">
+          <input type="number" name="attr_armas_base" value="0" >
+          </div>
+        <input type="hidden" name="attr_armas_talent" value="0" readonly>
+        <input type="hidden" name="attr_armas_item" value="0" readonly>
+        <input type="hidden" name="attr_armas_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_armas_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_atletismo" value="0" title="@{atletismo}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_atletismo" type="roll" value="&{template:default} {{name=Atletismo}} {{Resultado=[[(@{atletismo}+?{Name of Query|Fuerza, @{fuerza}|Destreza, @{destreza}|Constitución, @{constitucion}})d10k@{atletismo}!!+@{atletismo_flat}]]}}">Atletismo</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_atletismo_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_atletismo_talent" value="0" readonly>
+        <input type="hidden" name="attr_atletismo_item" value="0" readonly>
+        <input type="hidden" name="attr_atletismo_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_atletismo_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_batalla" value="0" title="@{batalla}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_batalla" type="roll" value="&{template:default} {{name=Batalla}} {{Resultado=[[(@{batalla}+@{entendimiento})d10k@{batalla}!!+@{batalla_flat}]]}}">Batalla</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_batalla_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_batalla_talent" value="0" readonly>
+        <input type="hidden" name="attr_batalla_item" value="0" readonly>
+        <input type="hidden" name="attr_batalla_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_batalla_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_concentracion" value="0" title="@{concentracion}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_concentracion" type="roll" value="&{template:default} {{name=Concentración}} {{Resultado=[[(@{concentracion}+?{Name of Query|Bravura, @{bravura}|Fe, @{fe}})d10k@{concentracion}!!+@{concentracion_flat}]]}}">Concentración</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_concentracion_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_concentracion_talent" value="0" readonly>
+        <input type="hidden" name="attr_concentracion_item" value="0" readonly>
+        <input type="hidden" name="attr_concentracion_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_concentracion_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_conducir" value="0" title="@{conducir}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_conducir" type="roll" value="&{template:default} {{name=Conducir}} {{Resultado=[[(@{conducir}+?{Name of Query|Destreza, @{destreza}|Entendimiento, @{entendimiento}})d10k@{conducir}!!+@{conducir_flat}]]}}">Conducir</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_conducir_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_conducir_talent" value="0" readonly>
+        <input type="hidden" name="attr_conducir_item" value="0" readonly>
+        <input type="hidden" name="attr_conducir_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_conducir_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_defensa" value="0" title="@{defensa}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_defensa" type="roll" value="&{template:default} {{name=Defensa}} {{Resultado=[[(@{defensa}+@{constitucion})d10k@{defensa}!!+@{defensa_flat}]]}}">Defensa</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_defensa_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_defensa_talent" value="0" readonly>
+        <input type="hidden" name="attr_defensa_item" value="0" readonly>
+        <input type="hidden" name="attr_defensa_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_defensa_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_equitacion" value="0" title="@{equitacion}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_equitacion" type="roll" value="&{template:default} {{name=Equitación}} {{Resultado=[[(@{equitacion}+@{destreza})d10k@{equitacion}!!+@{equitacion_flat}]]}}">Equitación</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_equitacion_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_equitacion_talent" value="0" readonly>
+        <input type="hidden" name="attr_equitacion_item" value="0" readonly>
+        <input type="hidden" name="attr_equitacion_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_equitacion_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_herreria" value="0" title="@{herreria}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_herreria" type="roll" value="&{template:default} {{name=Herrería}} {{Resultado=[[(@{herreria}+@{fuerza})d10k@{herreria}!!+@{herreria_flat}]]}}">Herrería</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_herreria_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_herreria_talent" value="0" readonly>
+        <input type="hidden" name="attr_dexterity_item" value="0" readonly>
+        <input type="hidden" name="attr_dexterity_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_dexterity_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+       <input type="number" name="attr_intimidacion" value="0" title="@{intimidacion}" readonly>
+       </div>
+       <div class="proezas-nombre">
+        <button name="roll_intimidacion" type="roll" value="&{template:default} {{name=Intimidación}} {{Resultado=[[(@{intimidacion}+?{Name of Query|Bravura, @{bravura}|Carisma, @{carisma}})d10k@{intimidacion}!!+@{intimidacion_flat}]]}}">Intimidación</button>
+        </div>
+        <div class="proezas-base">
+          <input type="number" name="attr_intimidacion_base" value="0" >
+          </div>
+        <input type="hidden" name="attr_intimidacion_talent" value="0" readonly>
+        <input type="hidden" name="attr_intimidacion_item" value="0" readonly>
+        <input type="hidden" name="attr_intimidacion_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_intimidacion_fijo" value="0" readonly>
+        </div>
+       </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_mecanica" value="0" title="@{mecanica}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_mecanica" type="roll" value="&{template:default} {{name=Mecanica}} {{Resultado=[[(@{mecanica}+?{Name of Query|Destreza, @{destreza}|Entendimiento, @{entendimiento}})d10k@{mecanica}!!+@{mecanica_flat}]]}}">Mecanica</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_mecanica_base" value="0" >
+        </div>
+      
+        <input type="hidden" name="attr_mecanica_talent" value="0" readonly>
+        <input type="hidden" name="attr_mecanica_item" value="0" readonly>
+        <input type="hidden" name="attr_mecanica_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_mecanica_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_pericias" value="0" title="@{pericias}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_pericias" type="roll" value="&{template:default} {{name=Pericias}} {{Resultado=[[(@{pericias}+@{destreza})d10k@{pericias}!!+@{pericias_flat}]]}}">Pericias</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_pericias_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_pericias_talent" value="0" readonly>
+        <input type="hidden" name="attr_pericias_item" value="0" readonly>
+        <input type="hidden" name="attr_pericias_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_pericias_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+      <input type="number" name="attr_sigilo" value="0" title="@{sigilo}" readonly>
+      </div>
+      <div class="proezas-nombre">
+        <button name="roll_sigilo" type="roll" value="&{template:default} {{name=Sigilo}} {{Resultado=[[(@{sigilo}+@{destreza})d10k@{sigilo}!!+@{sigilo_flat}]]}}">Sigilo</button>
+      </div>
+      <div class="proezas-base">
+        <input type="number" name="attr_sigilo_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_sigilo_talent" value="0" readonly>
+        <input type="hidden" name="attr_sigilo_item" value="0" readonly>
+        <input type="hidden" name="attr_sigilo_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_sigilo_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-proezas">
+        <div class="proezas-total">
+       <input type="number" name="attr_supervivencia" value="0" title="@{supervivencia}" readonly>
+       </div>
+       <div class="proezas-nombre">
+        <button name="roll_supervivencia" type="roll" value="&{template:default} {{name=Supervivencia}} {{Resultado=[[(@{supervivencia}+?{Name of Query|Entendimiento, @{entendimiento}|Fuerza, @{fuerza}|Destreza, @{destreza}})d10k@{supervivencia}!!+@{supervivencia_flat}]]}}">Supervivencia</button>
+        </div>
+        <div class="proezas-base">
+          <input type="number" name="attr_supervivencia_base" value="0" >
+          </div>
+        <input type="hidden" name="attr_supervivencia_talent" value="0" readonly>
+        <input type="hidden" name="attr_supervivencia_item" value="0" readonly>
+        <input type="hidden" name="attr_supervivencia_buff" value="0" readonly>
+        <div class="proezas-fijo">
+        <input type="number" name="attr_supervivencia_fijo" value="0" readonly>
+        </div>
+       </div>
+      </div>
+
+  <div class="sociales">
+    <H1>Habilidades</H1>
+    <div class="habilidades-sociales">
+      <div class="sociales-total">
+      <input type="number" name="attr_cocina" value="0" title="@{cocina}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_cocina" type="roll" value="&{template:default} {{name=Cocina}} {{Resultado=[[(@{cocina}+?{Name of Query|Entendimiento, @{entendimiento}|Destreza, @{destreza}|Carisma, @{carisma}})d10k@{cocina}!!+@{cocina_flat}]]}}">Cocina</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_cocina_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_cocina_talent" value="0" readonly>
+        <input type="hidden" name="attr_cocina_item" value="0" readonly>
+        <input type="hidden" name="attr_cocinabuff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_cocina_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+      <input type="number" name="attr_comercio" value="0" title="@{comercio}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_comercio" type="roll" value="&{template:default} {{name=Comercio}} {{Resultado=[[(@{comercio}+?{Name of Query|Entendimiento, @{entendimiento}|Carisma, @{carisma}})d10k@{comercio}!!+@{comercia_flat}]]}}">Comercio</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_comercio_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_comercio_talent" value="0" readonly>
+        <input type="hidden" name="attr_comercio_item" value="0" readonly>
+        <input type="hidden" name="attr_comercio_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_comercio_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+      <input type="number" name="attr_cultura" value="0" title="@{cultura}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_cultura" type="roll" value="&{template:default} {{name=Cultura}} {{Resultado=[[(@{cultura}+@{entendimiento})d10k@{cultura}!!+@{cultura_flat}]]}}">Cultura</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_cultura_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_cultura_talent" value="0" readonly>
+        <input type="hidden" name="attr_cultura_item" value="0" readonly>
+        <input type="hidden" name="attr_cultura_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_cultura_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+      <input type="number" name="attr_empatia" value="0" title="@{empatia}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_empatia" type="roll" value="&{template:default} {{name=Empatía}} {{Resultado=[[(@{empatia}+@{carisma})d10k@{empatia}!!+@{empatia_flat}]]}}">Empatía</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_empatia_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_empatia_talent" value="0" readonly>
+        <input type="hidden" name="attr_empatia__item" value="0" readonly>
+        <input type="hidden" name="attr_empatia__buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_empatia__fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+      <input type="number" name="attr_etiqueta" value="0" title="@{etiqueta}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_etiqueta" type="roll" value="&{template:default} {{name=Etiqueta}} {{Resultado=[[(@{etiqueta}+@{carisma})d10k@{etiqueta}!!+@{etiqueta_flat}]]}}">Etiqueta</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_etiqueta_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_etiqueta_talent" value="0" readonly>
+        <input type="hidden" name="attr_etiqueta_item" value="0" readonly>
+        <input type="hidden" name="attr_etiqueta_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_etiqueta_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+        <input type="number" name="attr_interpretacion" value="0" title="@{interpretacion}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_interpretacion" type="roll" value="&{template:default} {{name=Interpretación}} {{Resultado=[[(@{interpretacion}+@{carisma})d10k@{interpretacion}!!+@{interpretacion_flat}]]}}">Interpretación</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_interpretacion_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_interpretacion_talent" value="0" readonly>
+        <input type="hidden" name="attr_interpretacion_item" value="0" readonly>
+        <input type="hidden" name="attr_interpretacion_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_interpretacion_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+        <input type="number" name="attr_liderazgo" value="0" title="@{liderazgo}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_liderazgo" type="roll" value="&{template:default} {{name=Liderazgo}} {{Resultado=[[(@{liderazgo}+?{Name of Query|Bravura, @{bravura}|Carisma, @{carisma}})d10k@{liderazgo}!!+@{liderazgo_flat}]]}}">Liderazgo</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_liderazgo_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_liderazgo_talent" value="0" readonly>
+        <input type="hidden" name="attr_liderazgo_item" value="0" readonly>
+        <input type="hidden" name="attr_liderazgo_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_liderazgo_fijo" value="0" readonly>
+        </div>
+      </div>
+      
+      <div class="habilidades-sociales">
+        <div class="sociales-total">
+      <input type="number" name="attr_subterfugio" value="0" title="@{subterfugio}" readonly>
+      </div>
+        <div class="sociales-nombre">
+        <button name="roll_subterfugio" type="roll" value="&{template:default} {{name=Subterfugio}} {{Resultado=[[(@{subterfugio}+@{carisma})d10k@{subterfugio}!!+@{subterfugio_flat}]]}}">Subterfugio</button>
+      </div>
+      <div class="sociales-base">
+        <input type="number" name="attr_subterfugio_base" value="0" >
+        </div>
+        <input type="hidden" name="attr_subterfugio_talent" value="0" readonly>
+        <input type="hidden" name="attr_subterfugio_item" value="0" readonly>
+        <input type="hidden" name="attr_subterfugio_buff" value="0" readonly>
+        <div class="sociales-fijo">
+        <input type="number" name="attr_subterfugio_fijo" value="0" readonly>
+        </div>
+      </div>
+      </div>
+
+      <div class="conocimientos">
+        <div class="habilidades-conocimientos">
+          <div class="conocimiento-total">
+          <input type="number" name="attr_academicismo" value="0" title="@{academicismo}" readonly>
+          </div>
+            <div class="conocimiento-nombre"> <button name="roll_academicismo" type="roll" value="&{template:default} {{name=Academicismo}} {{Resultado=[[(@{academicismo}+@{entendimiento})d10k@{academicismo}!!+@{academicismo_flat}]]}}">Academicismo</button>
+          </div>
+          <div class="conocimientos-base">
+            <input type="number" name="attr_academicismo_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_academicismo_talent" value="0" readonly>
+            <input type="hidden" name="attr_academicismo_item" value="0" readonly>
+            <input type="hidden" name="attr_academicismo_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_academicismo_fijo" value="0" readonly>
+        </div>
+            
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_alquimia" value="0" title="@{alquimia}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_alquimia" type="roll" value="&{template:default} {{name=Alquimia}} {{Resultado=[[(@{alquimia}+@{entendimiento})d10k@{alquimia}!!+@{alquimia_flat}]]}}">Alquimia</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_alquimia_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_alquimia_talent" value="0" readonly>
+            <input type="hidden" name="attr_alquimia_item" value="0" readonly>
+            <input type="hidden" name="attr_alquimiabuff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_alquimia_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_hechiceria" value="0" title="@{hechiceria}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_hechiceria" type="roll" value="&{template:default} {{name=Hechiceria}} {{Resultado=[[(@{hechiceria}+?{Name of Query|Entendimiento, @{entendimiento}|Fe, @{fe}})d10k@{hechiceria}!!+@{hechiceria_flat}]]}}">Hechiceria</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_hechiceria_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_hechiceria_talent" value="0" readonly>
+            <input type="hidden" name="attr_hechiceria_item" value="0" readonly>
+            <input type="hidden" name="attr_hechiceria_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_hechiceria_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+           <input type="number" name="attr_informatica" value="0" title="@{informatica}" readonly>
+           </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_informatica" type="roll" value="&{template:default} {{name=Informática}} {{Resultado=[[(@{informatica}+?{Name of Query|Entendimiento, @{entendimiento}|Fe, @{fe}})d10k@{informatica}!!+@{informatica_flat}]]}}">Informática</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_informatica_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_informatica_talent" value="0" readonly>
+            <input type="hidden" name="attr_informatica__item" value="0" readonly>
+            <input type="hidden" name="attr_informatica__buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_informatica__fijo" value="0" readonly>
+        </div>
+              </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+           <input type="number" name="attr_investigacion" value="0" title="@{investigacion}" readonly>
+           </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_investigacion" type="roll" value="&{template:default} {{name=Investigación}} {{Resultado=[[(@{investigacion}+@{entendimiento})d10k@{investigacion}!!+@{investigacion_flat}]]}}">Investigación</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_investigacion_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_investigacion_talent" value="0" readonly>
+            <input type="hidden" name="attr_investigacion_item" value="0" readonly>
+            <input type="hidden" name="attr_investigacion_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_investigacion_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+           <input type="number" name="attr_linguistica" value="0" title="@{linguistica}" readonly>
+           </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_linguistica" type="roll" value="&{template:default} {{name=Lingüística}} {{Resultado=[[(@{linguistica}+@{entendimiento})d10k@{linguistica}!!+@{linguistica_flat}]]}}">Lingüística</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_linguistica_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_linguistica_talent" value="0" readonly>
+            <input type="hidden" name="attr_linguistica_item" value="0" readonly>
+            <input type="hidden" name="attr_linguistica_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_linguistica_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_medicina" value="0" title="@{medicina}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_medicina" type="roll" value="&{template:default} {{name=Medicina}} {{Resultado=[[(@{medicina}+@{entendimiento})d10k@{medicina}!!+@{medicina_flat}]]}}">Medicina</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_medicina_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_medicina_talent" value="0" readonly>
+            <input type="hidden" name="attr_medicina_item" value="0" readonly>
+            <input type="hidden" name="attr_medicina_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_medicina_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_ocultismo" value="0" title="@{ocultismo}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_ocultismo" type="roll" value="&{template:default} {{name=Ocultismo}} {{Resultado=[[(@{ocultismo}+?{Name of Query|Entendimiento, @{entendimiento}|Fe, @{fe}})d10k@{ocultismo}!!+@{ocultismo_flat}]]}}">Ocultismo</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_ocultismo_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_ocultismo_talent" value="0" readonly>
+            <input type="hidden" name="attr_ocultismo_item" value="0" readonly>
+            <input type="hidden" name="attr_ocultismo_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_ocultismo_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_teologia" value="0" title="@{teologia}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_teologia" type="roll" value="&{template:default} {{name=Teologia}} {{Resultado=[[(@{teologia}+?{Name of Query|Entendimiento, @{entendimiento}|Fe, @{fe}}})d10k@{teologia}!!+@{teologia_flat}]]}}">Teologia</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_teologia_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_teologia_talent" value="0" readonly>
+            <input type="hidden" name="attr_teologia_item" value="0" readonly>
+            <input type="hidden" name="attr_teologia_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_teologia_fijo" value="0" readonly>
+        </div>
+            </div>
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_tratoani" value="0" title="@{tratoani}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_tratoani" type="roll" value="&{template:default} {{name=Trato con Animales}} {{Resultado=[[(@{tratoani}+?{Name of Query|Entendimiento, @{entendimiento}|Carisma, @{carisma}}})d10k@{tratoani}!!+@{tratoani_flat}]]}}">Trato con Animales</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_tratoani_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_tratoani_talent" value="0" readonly>
+            <input type="hidden" name="attr_tratoani_item" value="0" readonly>
+            <input type="hidden" name="attr_tratoani_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_tratoani_fijo" value="0" readonly>
+        </div>
+            </div>
+        
+          <div class="habilidades-conocimientos">
+            <div class="conocimiento-total">
+          <input type="number" name="attr_veneno" value="0" title="@{veneno}" readonly>
+          </div>
+            <div class="conocimiento-nombre">
+            <button name="roll_veneno" type="roll" value="&{template:default} {{name=Venenos}} {{Resultado=[[(@{veneno}+@{entendimiento})d10k@{veneno}!!+@{veneno_flat}]]}}">Venenos</button>
+            </div>
+            <div class="conocimientos-base">
+            <input type="number" name="attr_veneno_base" value="0" >
+            </div>
+            <input type="hidden" name="attr_veneno_talent" value="0" readonly>
+            <input type="hidden" name="attr_veneno_item" value="0" readonly>
+            <input type="hidden" name="attr_veneno_buff" value="0" readonly>
+            <div class="conocimiento-fijo">
+            <input type="number" name="attr_veneno_fijo" value="0" readonly>
+        </div>
+          </div>
+        </div>
+
+  </div>
+
+</div>
+</div>
+</div>
